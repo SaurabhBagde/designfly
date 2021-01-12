@@ -54,9 +54,9 @@
 				)
 			);
 			?>
-			<form class="dsignfly-search">
-				<input type="text" class="search-input" />
-				<button class="search-submit-btn"><img src="<?php esc_attr_e( get_theme_file_uri( '/assets/img/search-icon-normal.png' ) ); ?>" class="search-submit-img" /></button>                    
+			<form class="dsignfly-search" action="<?php echo home_url( '/' ); ?>" method="get">
+				<input type="text" class="search-input" name="s" id="search" value="<?php the_search_query(); ?>"/>
+				<button id="header-search-btn" class="search-submit-btn"><img src="<?php esc_attr_e( get_theme_file_uri( '/assets/img/search-icon-normal.png' ) ); ?>" class="search-submit-img" /></button>                    
 			</form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

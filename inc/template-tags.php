@@ -27,7 +27,7 @@ if ( ! function_exists( 'dsign_fly_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'dsign-fly' ),
+			esc_html_x( 'Posted on %s ', ' post date ', 'dsign-fly' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -43,7 +43,7 @@ if ( ! function_exists( 'dsign_fly_posted_by' ) ) :
 	function dsign_fly_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'dsign-fly' ),
+			esc_html_x( 'by %s ', 'post author', 'dsign-fly' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
