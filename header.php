@@ -32,7 +32,7 @@
 			if ( has_custom_logo() ) :
 				the_custom_logo();
 			else :
-				$image_url = get_theme_file_uri( '/img/logo.png' );
+				$image_url = get_theme_file_uri( '/assets/img/logo.png' );
 
 				?>
 				<img src="<?php esc_attr_e( $image_url ); ?>" class="dsignfly-header-img" width="400" height="300">
@@ -56,7 +56,7 @@
 			?>
 			<form class="dsignfly-search">
 				<input type="text" class="search-input" />
-				<button class="search-submit-btn"><img src="<?php esc_attr_e( get_theme_file_uri( '/img/search-icon.png' ) ); ?>" class="search-submit-img" /></button>                    
+				<button class="search-submit-btn"><img src="<?php esc_attr_e( get_theme_file_uri( '/assets/img/search-icon-normal.png' ) ); ?>" class="search-submit-img" /></button>                    
 			</form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
