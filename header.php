@@ -102,7 +102,7 @@
 				<?php
 			endif;
 			?>
-<?php if ( is_front_page() ) : ?>
+
 
 <div class="container-fluid features-wrapper">
 	<div class="container features-container">
@@ -142,6 +142,6 @@
 	</div><!-- .container -->
 </div><!-- .container-fluid -->
 
-<?php endif; ?>	
+	
 
 		<div id="content" class="site-content">
