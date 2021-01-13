@@ -1,5 +1,7 @@
 /*****************Header*************************/
 .site-header {
+    background-image: url('../assets/img/rapeatable-bg.png');
+    background-repeat: repeat;
     display: flex;
     flex-flow: row wrap;
     height: 105px;
@@ -188,81 +190,86 @@ hr:first-child {
 /********************************************
 ------------ Header image styles -------------
 *********************************************/
-/* #intro-container {
+.intro-container {
   position: relative;
   height: 544px;
   width: 100%;
 }
 
-#intro-container .header-img {
+.intro-header-img {
   height: 100%;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
 }
 
-#intro-container .content {
+.intro-content {
   position: absolute;
   bottom: 50px; left: 50%;
   transform: translate(-50%, 0);
-} */
+}
 
-/* #intro-container .content .site-title,
-#intro-container .content .site-description {
+.intro-site-title,
+.intro-site-description {
   font-family: sans-serif;
   text-align: center;
   margin: 0;
   color: #FFF;
 }
 
-#intro-container .content .site-title {
+.intro-site-title {
   margin-bottom: 20px;
-  font-size: 5rem;
+  font-size: 70px;
+  color:#FFF;
+  font-family: 'open sans bold', 'Times New Roman', Times, serif;
   text-shadow: 2px 2px #950904;
 }
 
-#intro-container .content .site-title a {
+.intro-site-title a {
   color: #FFf;
 }
 
-#intro-container .content .site-title a:hover {
+.intro-site-title a:hover {
   text-decoration: none;
 }
 
-#intro-container .content .site-description {
-  font-size: 1.1rem;
-  line-height: 1.8rem;
-} */
+.intro-site-description {
+  line-height: 24px;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'open sans regular', 'Times New Roman', Times, serif;
+}
 
-/* hr.break {
+hr.break {
   margin: 0;
   height: 3px;
   background-color: #FFF;
-} */
+}
 
 /************************************************
 ----------- portfolio Section(home) -------------
 *************************************************/
 .portfolio-wrapper_home {
+  width: 62%;
   margin: 50px auto;
   display: -ms-grid;
   display: -moz-grid;
   display: grid;
-  -ms-grid-columns: 300px 300px 300px;
-  grid-template-columns: 300px 300px 300px;
+  -ms-grid-columns: repeat(3,  1fr);
+  grid-template-columns: repeat(3,  1fr);
   column-gap: 15px;
   row-gap: 15px;
   justify-content: center;
 }
 
 /* top and bottom bars */
-.portfolio-wrapper_home .portfolio-wrapper_home-top,
-.portfolio-wrapper_home .portfolio-wrapper_home-bottom {
+.portfolio-wrapper_home-top,
+.portfolio-wrapper_home-bottom {
   grid-column: 1/4;
   margin: 5px 0;
 }
 
-.portfolio-wrapper_home .portfolio-wrapper_home-top .title {
+.portfolio-wrapper_home-top .title {
   display: inline-block;
   font-family: 'Open Sans', sans-serif;
   color: #63585f;
@@ -505,40 +512,226 @@ hr:first-child {
   justify-content: center;
 }
 
-.banner{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url('../assets/img/full-slider.png');
-  height: 544px;
-  width: 100%;
 
- 
+/*************************************************************************************
+-------------------------------- Single Post Styles -----------------------------
+**************************************************************************************/
+/* #single-post-wrapper {
+  padding-top: 30px;
+} */
+.single-container{
+  padding-top: 30px;
 }
-.dsign-banner__h1{
-  align-self: center;
-  margin-top: 3em;
-  margin-bottom: 0;
-  font-size: 70px;
-  color:#FFF;
-  font-family: 'open sans bold', 'Times New Roman', Times, serif;
+
+/** entry header **/
+.entry-header .entry-title {
+  font-size: 2.5rem;
+  color: #62585f;
+  margin-bottom: 10px;
 }
-.dsign-banner__desc {
-  align-self: center;
-  line-height: 24px;
-  font-size: 16px;
-  color: #fff;
-  font-family: 'open sans regular', 'Times New Roman', Times, serif;
+
+.entry-header .bar {
+  margin: 10px 0 20px 0;
+  background: #62585f;
+  height: 1px;
+}
+
+.entry-header .entry-meta>span,
+.entry-header .posted-on a {
+  font-size: 0.9rem;
+  color: #62585f;
+}
+
+.entry-header .author a {
+  color: #ef4634;
+}
+
+.entry-header .entry-meta .comments {
+  float: right;
+  color: #ef4634;
+}
+
+.post-thumbnail {
+  margin-bottom: 30px;
 
 }
-.dsign-banner__desc {
+
+/** entry content **/
+.entry-content p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #62585f;
+  text-align: justify;
+}
+
+.entry-content ol,
+.entry-content ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.entry-content li {
+  margin: 5px 0;
+  text-align: justify;
+}
+
+.entry-content a {
+  color: #ef4634;
+}
+
+.entry-content img {
+  border-radius: 3px;
+}
+
+/** footer styles **/
+.entry-footer .tags-links,
+.entry-footer .cat-links {
   display: block;
-  margin-left: 0;
-  margin-right: 0;
-  z-index: 3;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #62585f;
+}
+.entry-footer .cat-links a {
+  color: #ef4634;
+}
+.entry-footer .tags-links a {
+  color: #ef4634;
 }
 
+/** comments **/
+.comments-wrapper {
+  margin-top: 50px;
+}
 
+.comments-wrapper .bars {
+  font-size: 1.3rem;
+  color: #62585f;
+}
 
+.comments-wrapper .bars:before,
+.comments-wrapper .bars:after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: #62585f;
+  margin: 10px 0;
+}
+
+#comments a {
+  color: #ef4634;
+}
+
+.comment-list {
+  padding: 0;
+  margin: 0;
+}
+
+.comment-list .comment,
+.comment-list .comment-body {
+  overflow: auto;
+}
+
+.vcard,
+.commentmetadata {
+  display: inline-block;
+  color: #62585f;
+  font-size: 0.9rem;
+}
+
+.commentmetadata a {
+  font-size: 0.9rem;
+  color: #62585f;
+}
+
+.commentmetadata .comment-edit-link {
+  color: #ef4634;
+}
+ .comment-body p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: #62585f;
+  margin-top: 10px;
+}
+
+ .comment-body .reply {
+  display: inline-block;
+  float: right;
+}
+
+.comment-body .reply a {
+  color: #ef4634;
+  font-size: 1rem;
+}
+
+.comment-body .reply a:before {
+  font-family: 'dashicons';
+  content: "\f344";
+  color: #ef4634;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.comments-wrapper .bar {
+  height: 1px;
+  width: 100%;
+  background-color: #62585f;
+}
+
+#reply-title,
+.comment-notes,
+.comment-form-comment>label:first-child,
+.comment-form-cookies-consent {
+  display: none;
+}
+.comment-form-comment {
+  margin-bottom: 5px;
+}
+
+.comment-form .logged-in-as a {
+  color: #ef4634;
+}
+
+.post-comment {
+  font-size: 1.4rem;
+  color: #62585f;
+  margin-bottom: 5px;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+  margin: 0;
+  padding: 0;
+  width: 33.33%;
+  float: left;
+}
+
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+  width: 95%;
+}
+
+.form-submit #submit {
+  float: right;
+  padding: 10px;
+  color: #FFF;
+  background-color: #222222;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.single-row{
+  display: flex;
+  
+}
+.single-post-display{
+  width: 70%;
+  margin-left: 10%;
+}
+.single-sidebar{
+  width: 30%;
+  margin-right: 5%;
+  margin-left: 5%
+}

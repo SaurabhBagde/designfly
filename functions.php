@@ -78,7 +78,7 @@ if ( ! function_exists( 'dsign_fly_setup' ) ) :
 				'dsign_fly_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
-					'default-image' => get_template_directory() . '/assets/img/repeatable-bg.png',
+					'default-image' => '',
 				)
 			)
 		);

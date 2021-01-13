@@ -17,7 +17,7 @@
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $query = new WP_Query( array( 
 	'post_type' => 'df-portfolio',
-	'posts_per_page' => 15,
+	'posts_per_page' => '15',
 	'paged'          => $paged 
 	)
  );
@@ -36,7 +36,7 @@ $query = new WP_Query( array(
 
 		<!-- top bar -->
 		<div class="portfolio-wrapper-top">
-            <p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
+            <p class="title"> <?php echo esc_html( get_theme_mod( 'dsign-fly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
 			<hr />
 		</div>
 	
@@ -49,7 +49,7 @@ $query = new WP_Query( array(
 	</div> <!-- #portfolio-wrapper -->
 	
 	<?php
-		designfly_pagination_bar( $query );
+		dsign_fly_pagination_bar( $query );
 	?>
 	</div>
 

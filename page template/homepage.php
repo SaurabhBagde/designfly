@@ -13,12 +13,12 @@
 
  get_header();
 ?>
-<div class="banner">
+<!-- <div class="banner">
 	<h1 class="dsign-banner__h1"><?php the_title(); ?></h1>
 	<div class="dsign-banner__desc">
 		<?php the_content(); ?>
 	</div>
-</div>
+</div> -->
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 

@@ -60,3 +60,88 @@
 			</form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	
+	<?php
+	if ( is_front_page() ) :
+		?>
+				<div class="intro-container">
+					<div class="intro-content">
+						<h1 class="intro-site-title">
+							<a  href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php bloginfo( 'name' ); ?>
+							</a>
+						</h1>
+
+				<?php
+					$designfly_description = get_bloginfo( 'description', 'display' );
+				if ( $designfly_description || is_customize_preview() ) :
+					?>
+						<p class="intro-site-description"><?php echo $designfly_description; ?></p>
+						<?php endif; ?>
+					</div>
+
+					<?php
+					if ( has_header_image() ) :
+						?>
+
+						<div class="intro-header-img" style="background: url( <?php echo get_header_image(); ?> )"></div>
+						
+						<?php
+					else :
+						?>
+						<div class="intro-header-img" style="background: url( <?php echo get_template_directory_uri() . '/assets/img/full-slider.png'; ?> )"></div>
+
+					<?php endif; ?>
+				</div>
+				
+				<hr class="break"/>
+
+				<?php
+			else :
+				?>
+				<?php
+			endif;
+			?>
+<?php if ( is_front_page(  ) ) : ?>
+
+<div class="container-fluid features-wrapper">
+	<div class="container features-container">
+		<div class="row">
+
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-features-image-1' ) ); ?> "/>
+				</div><!-- .thumbnail -->
+				<div class="content">
+					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-features-title-1' ) ); ?> </p>
+					<p class="description"> <?php echo esc_html( get_theme_mod( 'designfly-features-para-1' ) ); ?> </p>
+				</div><!-- .content -->
+			</div><!-- .col-sm-4 -->
+
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-features-image-2' ) ); ?> "/>
+				</div><!-- .thumbnail -->
+				<div class="content">
+					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-features-title-2' ) ); ?> </p>
+					<p class="description"> <?php echo esc_html( get_theme_mod( 'designfly-features-para-2' ) ); ?> </p>
+				</div><!-- .content -->
+			</div><!-- .col-sm-4 -->
+			
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-features-image-3' ) ); ?> "/>
+				</div><!-- .thumbnail -->
+				<div class="content">
+					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-features-title-3' ) ); ?> </p>
+					<p class="description"> <?php echo esc_html( get_theme_mod( 'designfly-features-para-3' ) ); ?> </p>
+				</div><!-- .content -->
+			</div><!-- .col-sm-4 -->
+
+		</div><!-- .row -->
+	</div><!-- .container -->
+</div><!-- .container-fluid -->
+
+<?php endif; ?>	
+
+		<div id="content" class="site-content">

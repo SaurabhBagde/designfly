@@ -152,6 +152,42 @@ if ( ! function_exists( 'dsign_fly_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+/**
+ * Displays the pagination.
+ *
+ * Wraps the pagination in a div with id 'pagination' and echoes it out.
+ * 
+ * @param $custom_query requires the query object to get pagination
+*/
+function dsign_fly_pagination_bar( $custom_query ) {
+
+    $total_pages = $custom_query->max_num_pages;
+    $big = 999999999; // need an unlikely integer
+
+    if ( $total_pages > 1 ) {
+        $current_page = max(1, get_query_var('paged'));
+
+        $pages =  paginate_links(array(
+            'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format'    => '?paged=%#%',
+            'current'   => $current_page,
+			'total'     => $total_pages,
+			'type'      => 'array',
+			'prev_text' => '<img class="pagination-arrow-left" src="' . get_template_directory_uri() . '/assets/images/pagination-arrow.png' . '" />',
+			'next_text' => '<img class="pagination-arrow-right" src="' . get_template_directory_uri() . '/assets/images/pagination-arrow.png' . '" />',
+		));
+		
+		/* for echoing out with custom html tags */
+		if( is_array( $pages ) ) {
+			$paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+			echo '<div id="pagination">';
+			foreach ( $pages as $page ) {
+					echo $page;
+			}
+		   echo '</div>';
+		}
+    }
+}
 
 if ( ! function_exists( 'wp_body_open' ) ) :
 	/**
