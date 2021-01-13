@@ -1,5 +1,7 @@
 /*****************Header*************************/
 .site-header {
+    background-image: url('../assets/img/rapeatable-bg.png');
+    background-repeat: repeat;
     display: flex;
     flex-flow: row wrap;
     height: 105px;
@@ -77,7 +79,66 @@
     height: 20px;
     object-fit: cover;
     object-position: 0 -4%;
+  
   }
+  /************************************************
+------------- Features bar Styles ---------------
+*************************************************/
+.features-wrapper {
+  /* display: flex; */
+  min-height: 101px;
+  background-image: url('../assets/img/features-repeatable-bg.png');
+  background-repeat: repeat;
+}
+
+.features-container,
+.features-row {
+  height: 100%;
+  width: 100%;
+}
+.features-row{
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  /*margin-left: 5%; */
+  
+}
+
+.feature-col-sm-4 {
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-thumbnail {
+  overflow: hidden;
+  min-height: 50px;
+  min-width: 50px;
+}
+
+.feature-thumbnail img {
+  border-radius: 50%;
+}
+
+.feature-content {
+  margin-left: 10px;
+  display: inline-block;
+  width: 77%;
+}
+
+.feature-title {
+  margin: 10px 0 5px 0;
+  font-size: 1.5rem;
+  font-weight: bold; 
+  color: #ef4634;
+}
+
+.feature-description {
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+  color: #333333;
+}
 /***********************footer*************************/
 .content .info .dsign-title,
 .content .contact-us .dsign-title {
@@ -182,4 +243,554 @@ hr:first-child {
 }
 .read-more:hover{
   text-decoration: underline;
+}
+/***********************HomePage************************/
+
+/********************************************
+------------ Header image styles -------------
+*********************************************/
+.intro-container {
+  position: relative;
+  height: 544px;
+  width: 100%;
+}
+
+.intro-header-img {
+  height: 100%;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.intro-content {
+  position: absolute;
+  bottom: 50px; left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.intro-site-title,
+.intro-site-description {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  color: #FFF;
+}
+
+.intro-site-title {
+  margin-bottom: 20px;
+  font-size: 70px;
+  color:#FFF;
+  font-family: 'open sans bold', 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px #950904;
+}
+
+.intro-site-title a {
+  color: #FFf;
+}
+
+.intro-site-title a:hover {
+  text-decoration: none;
+}
+
+.intro-site-description {
+  line-height: 24px;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'open sans regular', 'Times New Roman', Times, serif;
+}
+
+hr.break {
+  margin: 0;
+  height: 3px;
+  background-color: #FFF;
+}
+
+/************************************************
+----------- portfolio Section(home) -------------
+*************************************************/
+.portfolio-wrapper_home {
+  width: 62%;
+  margin: 50px auto;
+  display: -ms-grid;
+  display: -moz-grid;
+  display: grid;
+  -ms-grid-columns: repeat(3,  1fr);
+  grid-template-columns: repeat(3,  1fr);
+  column-gap: 15px;
+  row-gap: 15px;
+  justify-content: center;
+}
+
+/* top and bottom bars */
+.portfolio-wrapper_home-top,
+.portfolio-wrapper_home-bottom {
+  grid-column: 1/4;
+  margin: 5px 0;
+}
+
+.portfolio-wrapper_home-top .title {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  color: #63585f;
+  font-size: 3rem;
+  text-shadow: 2px 0 #ffffff;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.portfolio-wrapper_home .portfolio-view-all {
+  float: right;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #222222;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-top: 10px; /* can't find other way to do it */
+}
+
+.portfolio-wrapper_home .portfolio-view-all:hover {
+  background-color: #ef4634;
+  text-decoration: none;
+}
+
+.portfolio-wrapper_home div[class^="portfolio-wrapper_home-"]>hr {
+  margin: 0;
+  background: #62585f;
+  height: 1px;
+}
+
+.portfolio-wrapper_home>div[class^="post-"] {
+  position: relative;
+  height: 210px;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.portfolio-wrapper_home>div[class^="post-"] .view-image {
+  display: none;
+}
+
+.portfolio-wrapper_home .post-thumbnail img {
+  object-fit: cover;
+  object-position: center;
+  -moz-transition: 0.3s transform ease-out;
+  transition: 0.3s transform ease-out; 
+}
+
+.portfolio-wrapper_home>div[class^="post-"]:hover .post-thumbnail img {
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*************************************************************************************
+-------------------------------- Portfolio Template Styles ---------------------------
+**************************************************************************************/
+.portfolio-wrapper {
+  margin: 50px auto;
+  display: -ms-grid;
+  display: -moz-grid;
+  display: grid;
+  -ms-grid-columns: 300px 300px 300px;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 15px;
+  row-gap: 15px;
+  justify-content: center;
+}
+
+.portfolio-wrapper .portfolio-wrapper-top {
+  grid-column: 1/4;
+  margin: 5px 0;
+}
+
+.portfolio-wrapper .portfolio-wrapper-top hr {
+  margin: 10px 0 20px 0;
+  background: #62585f;
+  height: 1px;
+}
+
+.portfolio-wrapper .portfolio-wrapper-top .title {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  color: #63585f;
+  font-size: 3rem;
+  text-shadow: 2px 0 #ffffff;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.portfolio-wrapper>div[class^="post-"] {
+  cursor: pointer;
+  position: relative;
+  height: 210px;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.portfolio-wrapper .post-thumbnail img {
+  object-fit: cover;
+  object-position: center;
+  -moz-transition: 0.3s transform ease-out;
+  transition: 0.3s transform ease-out; 
+}
+
+/** Hover effect **/
+
+.portfolio-wrapper .view-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  -moz-transition: 0.3s opacity linear;
+  transition: 0.3s opacity linear;
+}
+
+.portfolio-wrapper .post-title {
+  display: none;
+}
+
+.portfolio-wrapper .view-image span {
+  margin-bottom: 5px;
+  color: #FFF;
+}
+
+.portfolio-wrapper>div[class^="post-"]:hover .post-thumbnail img {
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.portfolio-wrapper>div[class^="post-"]:hover .view-image {
+  opacity: 1;
+}
+
+/** Pagination styles **/
+.pagination {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination .page-numbers {
+  font-size: 16px;
+  color: #222222;
+  margin: 3px;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination .page-numbers:hover,
+.pagination .page-numbers.current {
+  text-decoration: none;
+  background-color: #ef4634;
+  color: #FFF;
+  border-radius: 3px;
+}
+
+
+.pagination .page-numbers.dots:hover {
+  text-decoration: none;
+  background-color: initial;
+  color: initial;
+  border-radius: initial;
+}
+
+.pagination .pagination-arrow-left {
+  transform: rotate(-180deg);
+}
+
+.pagination .pagination-current {
+  font-size: 1.1rem;
+  color: #222222;
+}
+
+/** View Image styles **/
+.view-image-container {
+  position: fixed;
+  z-index: 999;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.view-image-container .content-wrapper {
+  position: relative;
+  padding: 20px 20px 0px 20px;
+  background-color: #fff;
+}
+
+.view-image-container .content-wrapper img {
+  border-radius: 5px;
+}
+
+.view-image-container .content-wrapper .post-title {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.view-image-container .content-wrapper .post-title a {
+  font-size: 1.4rem;
+  color: #62585f;
+}
+
+.view-image-container .content-wrapper .post-title a:hover {
+  text-decoration: none;
+  color: #ef4634;
+}
+
+.view-image-container .content-wrapper .close{
+  position: absolute;
+  right: -35px;
+  top: 0;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  color: #62585f;
+  background-color: #FFF;
+  opacity: 1;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*************************************************************************************
+-------------------------------- Single Post Styles -----------------------------
+**************************************************************************************/
+/* #single-post-wrapper {
+  padding-top: 30px;
+} */
+.single-container{
+  padding-top: 30px;
+}
+
+/** entry header **/
+.entry-header .entry-title {
+  font-size: 2.5rem;
+  color: #62585f;
+  margin-bottom: 10px;
+}
+
+.entry-header .bar {
+  margin: 10px 0 20px 0;
+  background: #62585f;
+  height: 1px;
+}
+
+.entry-header .entry-meta>span,
+.entry-header .posted-on a {
+  font-size: 0.9rem;
+  color: #62585f;
+}
+
+.entry-header .author a {
+  color: #ef4634;
+}
+
+.entry-header .entry-meta .comments {
+  float: right;
+  color: #ef4634;
+}
+
+.post-thumbnail {
+  margin-bottom: 30px;
+
+}
+
+/** entry content **/
+.entry-content p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #62585f;
+  text-align: justify;
+}
+
+.entry-content ol,
+.entry-content ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.entry-content li {
+  margin: 5px 0;
+  text-align: justify;
+}
+
+.entry-content a {
+  color: #ef4634;
+}
+
+.entry-content img {
+  border-radius: 3px;
+}
+
+/** footer styles **/
+.entry-footer .tags-links,
+.entry-footer .cat-links {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #62585f;
+}
+.entry-footer .cat-links a {
+  color: #ef4634;
+}
+.entry-footer .tags-links a {
+  color: #ef4634;
+}
+
+/** comments **/
+.comments-wrapper {
+  margin-top: 50px;
+}
+
+.comments-wrapper .bars {
+  font-size: 1.3rem;
+  color: #62585f;
+}
+
+.comments-wrapper .bars:before,
+.comments-wrapper .bars:after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: #62585f;
+  margin: 10px 0;
+}
+
+#comments a {
+  color: #ef4634;
+}
+
+.comment-list {
+  padding: 0;
+  margin: 0;
+}
+
+.comment-list .comment,
+.comment-list .comment-body {
+  overflow: auto;
+}
+
+.vcard,
+.commentmetadata {
+  display: inline-block;
+  color: #62585f;
+  font-size: 0.9rem;
+}
+
+.commentmetadata a {
+  font-size: 0.9rem;
+  color: #62585f;
+}
+
+.commentmetadata .comment-edit-link {
+  color: #ef4634;
+}
+ .comment-body p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: #62585f;
+  margin-top: 10px;
+}
+
+ .comment-body .reply {
+  display: inline-block;
+  float: right;
+}
+
+.comment-body .reply a {
+  color: #ef4634;
+  font-size: 1rem;
+}
+
+.comment-body .reply a:before {
+  font-family: 'dashicons';
+  content: "\f344";
+  color: #ef4634;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.comments-wrapper .bar {
+  height: 1px;
+  width: 100%;
+  background-color: #62585f;
+}
+
+#reply-title,
+.comment-notes,
+.comment-form-comment>label:first-child,
+.comment-form-cookies-consent {
+  display: none;
+}
+.comment-form-comment {
+  margin-bottom: 5px;
+}
+
+.comment-form .logged-in-as a {
+  color: #ef4634;
+}
+
+.post-comment {
+  font-size: 1.4rem;
+  color: #62585f;
+  margin-bottom: 5px;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+  margin: 0;
+  padding: 0;
+  width: 33.33%;
+  float: left;
+}
+
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+  width: 95%;
+}
+
+.form-submit #submit {
+  float: right;
+  padding: 10px;
+  color: #FFF;
+  background-color: #222222;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.single-row{
+  display: flex;
+  
+}
+.single-post-display{
+  width: 70%;
+  margin-left: 10%;
+}
+.single-sidebar{
+  width: 30%;
+  margin-right: 5%;
+  margin-left: 5%
 }

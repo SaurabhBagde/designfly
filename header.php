@@ -54,9 +54,94 @@
 				)
 			);
 			?>
-			<form class="dsignfly-search">
-				<input type="text" class="search-input" />
-				<button class="search-submit-btn"><img src="<?php esc_attr_e( get_theme_file_uri( '/assets/img/search-icon-normal.png' ) ); ?>" class="search-submit-img" /></button>                    
+			<form class="dsignfly-search" action="<?php echo home_url( '/' ); ?>" method="get">
+				<input type="text" class="search-input" name="s" id="search" value="<?php the_search_query(); ?>"/>
+				<button id="header-search-btn" class="search-submit-btn"><img src="<?php esc_attr_e( get_theme_file_uri( '/assets/img/search-icon-normal.png' ) ); ?>" class="search-submit-img" /></button>                    
 			</form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	
+	<?php
+	if ( is_front_page() ) :
+		?>
+				<div class="intro-container">
+					<div class="intro-content">
+						<h1 class="intro-site-title">
+							<a  href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php bloginfo( 'name' ); ?>
+							</a>
+						</h1>
+
+				<?php
+					$designfly_description = get_bloginfo( 'description', 'display' );
+				if ( $designfly_description || is_customize_preview() ) :
+					?>
+						<p class="intro-site-description"><?php echo $designfly_description; ?></p>
+						<?php endif; ?>
+					</div>
+
+					<?php
+					if ( has_header_image() ) :
+						?>
+
+						<div class="intro-header-img" style="background: url( <?php echo get_header_image(); ?> )"></div>
+						
+						<?php
+					else :
+						?>
+						<div class="intro-header-img" style="background: url( <?php echo get_template_directory_uri() . '/assets/img/full-slider.png'; ?> )"></div>
+
+					<?php endif; ?>
+				</div>
+				
+				<hr class="break"/>
+
+				<?php
+			else :
+				?>
+				<?php
+			endif;
+			?>
+<?php if ( is_front_page() ) : ?>
+
+<div class="container-fluid features-wrapper">
+	<div class="container features-container">
+		<div class="features-row">
+
+			<div class="feature-col-sm-4">
+				<div class="feature-thumbnail">
+					<img src=" <?php esc_attr_e( get_template_directory_uri() . '/assets/img/feature-icons-1.png' ); ?> "/>
+				</div><!-- .thumbnail -->
+				<div class="feature-content">
+					<p class="feature-title"> Avertising </p>
+					<p class="feature-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eum? </p>
+				</div><!-- .content -->
+			</div><!-- .col-sm-4 -->
+
+			<div class="feature-col-sm-4">
+				<div class="feature-thumbnail">
+				<img src=" <?php esc_attr_e( get_template_directory_uri() . '/assets/img/feature-icons-1.png' ); ?> "/>
+				</div><!-- .thumbnail -->
+				<div class="feature-content">
+					<p class="feature-title"> Multimedia </p>
+					<p class="feature-description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, quasi! </p>
+				</div><!-- .content -->
+			</div><!-- .col-sm-4 -->
+			
+			<div class="feature-col-sm-4">
+				<div class="feature-thumbnail">
+				<img src=" <?php esc_attr_e( get_template_directory_uri() . '/assets/img/feature-icons-1.png' ); ?> "/>
+				</div><!-- .thumbnail -->
+				<div class="feature-content">
+					<p class="feature-title"> Photography </p>
+					<p class="feature-description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, quod. </p>
+				</div><!-- .content -->
+			</div><!-- .col-sm-4 -->
+
+		</div><!-- .row -->
+	</div><!-- .container -->
+</div><!-- .container-fluid -->
+
+<?php endif; ?>	
+
+		<div id="content" class="site-content">
