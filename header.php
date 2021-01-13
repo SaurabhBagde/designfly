@@ -102,39 +102,39 @@
 				<?php
 			endif;
 			?>
-<?php if ( is_front_page(  ) ) : ?>
+<?php if ( is_front_page() ) : ?>
 
 <div class="container-fluid features-wrapper">
 	<div class="container features-container">
-		<div class="row">
+		<div class="features-row">
 
-			<div class="col-sm-4">
-				<div class="thumbnail">
-					<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-features-image-1' ) ); ?> "/>
+			<div class="feature-col-sm-4">
+				<div class="feature-thumbnail">
+					<img src=" <?php esc_attr_e( get_template_directory_uri() . '/assets/img/feature-icons-1.png' ); ?> "/>
 				</div><!-- .thumbnail -->
-				<div class="content">
-					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-features-title-1' ) ); ?> </p>
-					<p class="description"> <?php echo esc_html( get_theme_mod( 'designfly-features-para-1' ) ); ?> </p>
+				<div class="feature-content">
+					<p class="feature-title"> Avertising </p>
+					<p class="feature-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eum? </p>
 				</div><!-- .content -->
 			</div><!-- .col-sm-4 -->
 
-			<div class="col-sm-4">
-				<div class="thumbnail">
-					<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-features-image-2' ) ); ?> "/>
+			<div class="feature-col-sm-4">
+				<div class="feature-thumbnail">
+				<img src=" <?php esc_attr_e( get_template_directory_uri() . '/assets/img/feature-icons-1.png' ); ?> "/>
 				</div><!-- .thumbnail -->
-				<div class="content">
-					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-features-title-2' ) ); ?> </p>
-					<p class="description"> <?php echo esc_html( get_theme_mod( 'designfly-features-para-2' ) ); ?> </p>
+				<div class="feature-content">
+					<p class="feature-title"> Multimedia </p>
+					<p class="feature-description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, quasi! </p>
 				</div><!-- .content -->
 			</div><!-- .col-sm-4 -->
 			
-			<div class="col-sm-4">
-				<div class="thumbnail">
-					<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-features-image-3' ) ); ?> "/>
+			<div class="feature-col-sm-4">
+				<div class="feature-thumbnail">
+				<img src=" <?php esc_attr_e( get_template_directory_uri() . '/assets/img/feature-icons-1.png' ); ?> "/>
 				</div><!-- .thumbnail -->
-				<div class="content">
-					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-features-title-3' ) ); ?> </p>
-					<p class="description"> <?php echo esc_html( get_theme_mod( 'designfly-features-para-3' ) ); ?> </p>
+				<div class="feature-content">
+					<p class="feature-title"> Photography </p>
+					<p class="feature-description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, quod. </p>
 				</div><!-- .content -->
 			</div><!-- .col-sm-4 -->
 

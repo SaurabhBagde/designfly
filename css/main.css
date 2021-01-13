@@ -79,7 +79,66 @@
     height: 20px;
     object-fit: cover;
     object-position: 0 -4%;
+  
   }
+  /************************************************
+------------- Features bar Styles ---------------
+*************************************************/
+.features-wrapper {
+  /* display: flex; */
+  min-height: 101px;
+  background-image: url('../assets/img/features-repeatable-bg.png');
+  background-repeat: repeat;
+}
+
+.features-container,
+.features-row {
+  height: 100%;
+  width: 100%;
+}
+.features-row{
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  /*margin-left: 5%; */
+  
+}
+
+.feature-col-sm-4 {
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-thumbnail {
+  overflow: hidden;
+  min-height: 50px;
+  min-width: 50px;
+}
+
+.feature-thumbnail img {
+  border-radius: 50%;
+}
+
+.feature-content {
+  margin-left: 10px;
+  display: inline-block;
+  width: 77%;
+}
+
+.feature-title {
+  margin: 10px 0 5px 0;
+  font-size: 1.5rem;
+  font-weight: bold; 
+  color: #ef4634;
+}
+
+.feature-description {
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+  color: #333333;
+}
 /***********************footer*************************/
 .content .info .dsign-title,
 .content .contact-us .dsign-title {
