@@ -13,12 +13,7 @@
 
  get_header();
 ?>
-<!-- <div class="banner">
-	<h1 class="dsign-banner__h1"><?php the_title(); ?></h1>
-	<div class="dsign-banner__desc">
-		<?php the_content(); ?>
-	</div>
-</div> -->
+
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
@@ -36,13 +31,13 @@
 		<div class="portfolio-wrapper_home">
 	
 			<!-- top bar -->
-				<div class="portfolio-wrapper_home-top">
+			<div class="portfolio-wrapper_home-top">
 					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
-					<a href=" <?php echo get_permalink( get_theme_mod( 'designfly-home-portfolio-btn', '#' ) ); ?>" class="portfolio-view-all">
+					<a href="#" class="portfolio-view-all">
 						<?php esc_html_e( 'view all', 'designfly' ); ?>
 					</a>
 					<hr />
-				</div>
+			</div>
 		<?php
 		if ( $query->have_posts() ) :
 

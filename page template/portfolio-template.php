@@ -27,7 +27,7 @@ $query = new WP_Query( array(
 
 	<div class="view-image-container">
 		<div class="content-wrapper">
-			<img src="" />
+			<!-- <img src="" /> -->
 			<span class="close"><span class="dashicons dashicons-no-alt"></span></span>
 		</div>
 	</div>

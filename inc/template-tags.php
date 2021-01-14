@@ -173,14 +173,14 @@ function dsign_fly_pagination_bar( $custom_query ) {
             'current'   => $current_page,
 			'total'     => $total_pages,
 			'type'      => 'array',
-			'prev_text' => '<img class="pagination-arrow-left" src="' . get_template_directory_uri() . '/assets/images/pagination-arrow.png' . '" />',
-			'next_text' => '<img class="pagination-arrow-right" src="' . get_template_directory_uri() . '/assets/images/pagination-arrow.png' . '" />',
+			'prev_text' => '<img class="pagination-arrow-left" src="' . get_template_directory_uri() . '/assets/img/pagination-arrow.png' . '" />',
+			'next_text' => '<img class="pagination-arrow-right" src="' . get_template_directory_uri() . '/assets/img/pagination-arrow.png' . '" />',
 		));
 		
 		/* for echoing out with custom html tags */
 		if( is_array( $pages ) ) {
 			$paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
-			echo '<div id="pagination">';
+			echo '<div class="pagination">';
 			foreach ( $pages as $page ) {
 					echo $page;
 			}

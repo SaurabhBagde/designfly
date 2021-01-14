@@ -44,7 +44,7 @@
 			</div>
 			<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'designfly' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dsign-fly' ),
 				'after'  => '</div>',
 			) );
 			?>
@@ -57,7 +57,7 @@
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php the_post_thumbnail(); ?>
 			</a>
-
+			<?php if(!is_front_page(  )) :?>
 			<div class="post-title">
 				<a aia-hidden="true" href="<?php the_permalink(); ?>" tabindex="-1">
 					<?php the_title(); ?>
@@ -65,6 +65,7 @@
 			</div>
 
 		<?php
+		endif;
 		endif; // End is_singular().
 	?>
 
