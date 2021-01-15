@@ -35,7 +35,7 @@
 			
 			</header>
 			
-			<div class="post-thumbnail">
+			<div class="post-thumbnail ">
 				<?php the_post_thumbnail(); ?>
 			</div>
 			
@@ -51,6 +51,7 @@
 		<?php else: ?>
 		
 			<div class="view-image">
+				
 				<span class="dashicons dashicons-instagram"></span>
 				<span>View Image</span>
 			</div>

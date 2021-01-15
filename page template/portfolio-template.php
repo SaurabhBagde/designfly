@@ -45,6 +45,7 @@ $query = new WP_Query( array(
         $query -> the_post();
     	get_template_part( 'template-parts/content', 'df-portfolio' );  
 	endwhile;
+	wp_reset_postdata();
 	?>
 	</div> <!-- #portfolio-wrapper -->
 	
