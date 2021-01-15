@@ -7,7 +7,7 @@
 
 ?>
 <div class="blog-wrapper">
-    <article id="post-<?php the_ID(); ?>" class="<?php  post_class(); ?>">
+    <article id="post-<?php the_ID(); ?>" <?php  post_class(); ?>>
         <a href=" <?php echo get_post_permalink(); ?> " class="blog-permalink">
             <header class="blog-entry-header">
                 <div class="blog-date">
@@ -22,21 +22,20 @@
     /* thumbnail */
     if ( has_post_thumbnail() ) : 
         ?>
-        <div class="blog-temp-row content">
+        <div class="blog-temp-row">
             <div class="blog-col-thumb thumbnail">
                 <?php dsign_fly_post_thumbnail(); ?>
             </div>
-            <div class="blog-col-para para">
+            <div class="blog-col-para">
                 <div class="blog-author-bar">
-                    <p class="author">by <a href=" <?php echo get_the_author_link(); ?> ">
-                        <?php echo get_the_author_meta('display_name'); ?></a> on <?php echo get_the_date( 'd M Y'); ?></p>
+                    <p class="author">by <?php echo get_the_author_link(); ?> on <?php echo get_the_date( 'd M Y'); ?></p>
                     <p class="blog-comments"><span class="blog-comments__text"><?php echo get_comments_number(); ?> Comment(s)</span> </p> 
                 </div>
                 <hr class="blog-bar">
                 <div class="blog-entry-content">
                 <?php the_excerpt(); ?>
                 <?php if(!empty( get_the_excerpt()) ): ?>
-                <button class="read-more">read more</button>
+                <a class="read-more">read more</a>
                 <?php endif; ?>
                 </div><!-- .entry-content -->
             </div><!-- .para -->
@@ -45,17 +44,17 @@
         <?php
         else : 
         ?>
-        <div class="content">
-            <div class="para">
-                <div class="author-bar">
-                    <p class="author">by <a href="<?php echo get_the_author_link(); ?>">
-                        <?php echo get_author_name(); ?></a> on <?php echo get_the_date( 'd M Y'); ?></p>
-                    <p class="comments"><?php echo get_comments_number(); ?> Comment(s) </p> 
+        <div class="blog-temp-row">
+            <div class="blog-col-para">
+                <div class="blog-author-bar">
+               
+                    <p class="author">by <?php echo get_the_author_link(); ?> on <?php echo get_the_date( 'd M Y'); ?></p>
+                    <p class="blog-comments"><span class="blog-comments__text"><?php echo get_comments_number(); ?> Comment(s)</span> </p> 
                 </div><!-- .author-bar -->
                 
-                <hr class="bar">
+                <hr class="blog-bar">
                 
-                <div class="entry-content">
+                <div class="blog-entry-content">
                     <?php
                         the_excerpt();
 

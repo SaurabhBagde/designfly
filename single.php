@@ -33,7 +33,7 @@ get_header();
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) : ?>
 							<div class="comments-wrapper">
-								<p class="bars"><?php esc_html_e( 'Comments', 'designfly' ); ?></p>
+								<p class="comments-bars"><?php esc_html_e( 'Comments', 'designfly' ); ?></p>
 							<?php comments_template(); ?>
 							</div>
 						<?php

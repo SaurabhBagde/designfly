@@ -14,7 +14,6 @@
 
  get_header();
 ?>
-
 <div id="blog-template" class="container">
     <div class="single-row">
         <div class="single-post-display">
