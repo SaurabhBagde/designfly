@@ -9,14 +9,16 @@
  */
 
 get_header();
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-$author =get_current_user_id();
-$query = new WP_Query( array( 
-	'post_type' => array('df-portfolio','post'),
-    'posts_per_page' => '15',
-    'author' => $author,
+$paged  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$author = get_current_user_id();
+$query  = new WP_Query(
+	array(
+		'post_type'      => array( 'df-portfolio', 'post' ),
+		'posts_per_page' => '15',
+		'author'         => $author,
+		'paged'          => $paged,
 	)
- );
+);
 ?>
 
 	<div id="archive-wrapper" class="content-area">
@@ -49,17 +51,17 @@ $query = new WP_Query( array(
 						get_template_part( 'template-parts/content', 'blog-template' );
 
 					endwhile;
-                    wp_reset_postdata();
+					wp_reset_postdata();
 					the_posts_navigation();
-                    
-		            dsign_fly_pagination_bar( $query );
-	
+
+					dsign_fly_pagination_bar( $query );
+
 				else :
 
 					get_template_part( 'template-parts/content', 'none' );
 
 				endif;
-		?>
+				?>
 
 				</main><!-- #main -->
 		</div><!-- .col-md-8 -->
