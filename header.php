@@ -42,7 +42,13 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'dsign-fly' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<svg viewBox="0 0 100 80" width="30" height="30">
+					<rect width="60" height="10"></rect>
+					<rect y="20" width="60" height="10"></rect>
+					<rect y="40" width="60" height="10"></rect>
+				</svg>
+			</button>
 			<?php
 			wp_nav_menu(
 				array(

@@ -73,7 +73,12 @@ class Dsign_fly_Portfolio_Widget extends WP_Widget {
             <?php
             while ( $query -> have_posts() ):
                 $query -> the_post();
-                get_template_part( 'template-parts/content', 'df-portfolio' );  
+                // get_template_part( 'template-parts/content', 'df-portfolio' );  
+                ?>
+                <div>
+                <a href=" <?php echo get_post_permalink(); ?>" >  <?php the_post_thumbnail();?> </a>
+                </div>
+                <?php
             endwhile;
             ?>
             
