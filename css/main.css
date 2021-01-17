@@ -173,7 +173,12 @@
     color: #ef4634;
     margin-top: 10px;
     background-color: #fff;
-}    
+    text-decoration: none;
+
+  }
+  .read-more:hover {
+    text-decoration: underline;
+  }    
 
 .contact-us .social-media {
     list-style-type: none;
@@ -1009,3 +1014,27 @@ hr.break {
   height: 20px;
   width: 20px;
 } */
+/********************************************
+----------------- thickbox ------------------
+*********************************************/
+
+#TB_Image {
+  margin: 20px 20px 80px 20px;
+  border-radius: 5px;
+}
+#TB_caption {
+  width: 100%;
+  height: auto !important;
+  float: none !important;
+}
+#TB_closeWindow {
+  padding: 0 !important;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  float: none !important;
+  position: absolute;
+  left: calc(100% + 0px);
+  top: 0;
+  transform: translate(-calc(100% + 0px), 0);
+}

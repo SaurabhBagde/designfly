@@ -156,7 +156,10 @@ function dsign_fly_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'dsign_fly_scripts' );
-
+function fnctn_add_thickbox () {
+    add_thickbox();
+}
+add_action ( 'wp_enqueue_scripts','fnctn_add_thickbox' );
 
 
 $dsignfly_dependencies = apply_filters(

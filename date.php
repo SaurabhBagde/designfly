@@ -1,7 +1,8 @@
 <?php
 /**
- * Template Name: tag
- * The template for displaying tag pages
+ * Template Name: date
+ * 
+ * The template for displaying date
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,17 +10,6 @@
  */
 
 get_header();
-$paged  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-$id    = get_query_var( 'tag' );
-// $id = $_GET['tag'];
-$query  = new WP_Query(
-	array(
-		'post_type'      => array('df-portfolio','post'),
-		'posts_per_page' => '15',
-		'paged'          => $paged,
-        'tag'         =>  $id,
-	)
-);
 ?>
 
 	<div id="archive-wrapper" class="content-area">
@@ -28,20 +18,19 @@ $query  = new WP_Query(
 			<div class="single-post-display">
 				<main id="main" class="site-main">
 
-				<?php if ( $query->have_posts() ) : ?>
+				<?php if ( have_posts() ) : ?>
 
 					<header class="archive-page-header">
-						<?php
-						single_cat_title( '<h1 class="archive-page-title">', '</h1>' );
-						the_archive_description( '<div class="archive-description">', '</div>' );
-						?>
+                        <div class="blog-author-bar blog-header">
+                            <p class="author"> <?php echo get_the_date( 'd M Y' ); ?></p> 
+                        </div>
 						<hr class="archive-bar">
 					</header><!-- .page-header -->
 
 					<?php
 					/* Start the Loop */
-					while ( $query->have_posts() ) :
-						$query->the_post();
+					while ( have_posts() ) :
+						the_post();
 
 						/*
 						* Include the Post-Type-specific template for the content.
@@ -52,16 +41,15 @@ $query  = new WP_Query(
 
 					endwhile;
 					wp_reset_postdata();
-					the_posts_navigation();
 
-					dsign_fly_pagination_bar( $query );
+					the_posts_navigation();
 
 				else :
 
 					get_template_part( 'template-parts/content', 'none' );
 
 				endif;
-				?>
+		?>
 
 				</main><!-- #main -->
 		</div><!-- .col-md-8 -->

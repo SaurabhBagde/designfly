@@ -49,22 +49,31 @@
 			) );
 			?>
 		<?php else: ?>
-		
-			<div class="view-image">
+			<?php if(!is_front_page(  )) :?>
+			<!-- <div class="view-image">
 				
 				<span class="dashicons dashicons-instagram"></span>
 				<span>View Image</span>
-			</div>
-			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+			</div> -->
+			<a class="post-thumbnail thickbox" rel="lightbox" href="<?php echo get_the_post_thumbnail_url() . '?TB_iframe=true&width=600&height=550'//the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php the_post_thumbnail(); ?>
 			</a>
-			<?php if(!is_front_page(  )) :?>
+			
 			<div class="post-title">
 				<a aia-hidden="true" href="<?php the_permalink(); ?>" tabindex="-1">
 					<?php the_title(); ?>
 				</a>
 			</div>
+			<?php else:?>
 
+				<div class="view-image">
+				
+				<span class="dashicons dashicons-instagram"></span>
+				<span>View Image</span>
+			</div>
+			<a class="post-thumbnail " href="<?php echo the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+				<?php the_post_thumbnail(); ?>
+			</a>
 		<?php
 		endif;
 		endif; // End is_singular().
