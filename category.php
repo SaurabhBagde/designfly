@@ -9,11 +9,12 @@
  */
 
 get_header();
-$paged  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-$id = $_GET['cat'];
-$query  = new WP_Query(
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$id    = get_query_var( 'cat' );
+// $id    = $_GET['cat'];
+$query = new WP_Query(
 	array(
-		'post_type'      => array('df-portfolio','post'),
+		'post_type'      => array( 'df-portfolio', 'post' ),
 		'posts_per_page' => '15',
 		'paged'          => $paged,
 		'cat'            => $id,

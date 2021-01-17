@@ -38,15 +38,27 @@ $query = new WP_Query( array(
 		<div class="portfolio-wrapper-top">
 			<p class="title"> <span class="portfolio-title"><?php echo esc_html( get_theme_mod( 'dsign-fly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </span> </p>
 			<div class="portfolio-btns">
-				<a href="#" class="portfolio-btns__link">
-					<?php esc_html_e( 'Advertising', 'dsign-fly' ); ?>
+				<?php
+					$terms = get_terms(array('taxonomy' => 'post_tag' , 'hide_empty' => false));
+					foreach ( $terms as $term ) {
+						?>
+						<a
+							href="<?php echo esc_url( get_term_link( $term ) ); ?>" 
+							role="button" 
+							class="portfolio-btns__link"
+						>
+							<?php esc_html_e( $term->name ); ?>
+						</a>
+						<?php
+					}
+				?>
+				
+				<!-- <a href="#" class="portfolio-btns__link">
+					<?php// esc_html_e( 'Multimedia', 'dsign-fly' ); ?>
 				</a>
 				<a href="#" class="portfolio-btns__link">
-					<?php esc_html_e( 'Multimedia', 'dsign-fly' ); ?>
-				</a>
-				<a href="#" class="portfolio-btns__link">
-					<?php esc_html_e( 'photography', 'dsign-fly' ); ?>
-				</a>
+					<?php //esc_html_e( 'photography', 'dsign-fly' ); ?>
+				</a> -->
 			</div>
 			<hr />
 		</div>

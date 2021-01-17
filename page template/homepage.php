@@ -33,7 +33,7 @@
 			<!-- top bar -->
 			<div class="portfolio-wrapper_home-top">
 					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
-					<a href="#" class="portfolio-view-all">
+					<a href="<?php esc_attr_e(get_permalink(get_page_by_title( 'Portfolio' )));?>" class="portfolio-view-all">
 						<?php esc_html_e( 'view all', 'designfly' ); ?>
 					</a>
 					<hr />
