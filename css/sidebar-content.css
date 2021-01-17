@@ -92,6 +92,7 @@
 .widget-area ul li a {
 	display: block;
 	color: #ef4634;
+	text-decoration: none;
 }
 
 .widget-area li .post-date {
@@ -117,10 +118,11 @@
 }
 
 .widget-area .widget_archive li a {
-	font-size: 0.9rem;
+	font-size: 1rem;
 	color: #62585f;
 	display: flex;
 	align-items: center;
+	text-decoration: none;
 }
 
 .widget-area .widget_archive li a:hover {
@@ -146,5 +148,20 @@
 .widget_search input[type="submit"] {
 	background-color: #222222;
 	color: #fff;
-	font-size: 0.9rem;
+	font-size: 1rem;
 }
+
+/********************************************************
+------------------- Tag Cloud ---------------------
+********************************************************/
+
+.widget-area .tagcloud {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .widget-area .tagcloud .tag-cloud-link {
+	text-decoration: none;
+	color: #ef4634;
+	font-size: 1rem !important;
+  }
