@@ -24,7 +24,7 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dsign-fly' ); ?></a>
-
+	<div class="header-container">
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -66,6 +66,8 @@
 			</form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	</div>
+	
 	
 	<?php
 	if ( is_front_page() ) :
@@ -110,8 +112,8 @@
 			?>
 
 
-<div class="container-fluid features-wrapper">
-	<div class="container features-container">
+<div class="features-wrapper">
+	<div class="features-container">
 		<div class="features-row">
 
 			<div class="feature-col-sm-4">

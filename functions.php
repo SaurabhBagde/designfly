@@ -143,7 +143,6 @@ function dsign_fly_scripts() {
 	wp_enqueue_style( 'dsign-fly-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'dsign-fly-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'dsign-fly-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootsrap.css', array(), '6.6.3' );
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css', array(), '1.0.0' );
 	wp_enqueue_style( 'media-queries', get_template_directory_uri() . '/css/media-queries.css', array(), '1.0.0' );
 	wp_enqueue_style( 'open-sans-bold', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap', array(), '1.0.0' );

@@ -7,6 +7,7 @@
 @media only screen and (max-width: 1142px) {
     .portfolio-wrapper,
     .portfolio-wrapper_home {
+        width:100%;
         -ms-grid-columns: 300px 300px;
         grid-template-columns: 300px 300px;
     }
@@ -22,6 +23,15 @@
 
     .portfolio-wrapper .portfolio-wrapper-top {
         grid-column: 1/3;
+    }
+    .intro-site-title{
+        font-size: 30px;
+    }
+    .intro-site-description{
+        font-size: 18px;
+    }
+    .intro-container{
+        height:400px;
     }
 }
 
@@ -59,17 +69,22 @@
         align-self: ;
     } */
     .site-branding img{
+        margin-top:10px;
+        margin-left: 10%;
         width: 50%;
         height: 60%;
+    }
+    .feature-content{
+        text-align: center;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    
+/*     
     #portfolio-widget-wrapper {
         -ms-grid-columns: auto auto auto auto;
         grid-template-columns: auto auto auto auto;
-    }
+    } */
     .dsignfly-search .search-input{
         width: 100px;
     }
@@ -84,7 +99,44 @@
         margin-top: 30px;
         margin-bottom: 20px;
     }
-  
+    .container{
+        width: 100%;
+    }
+    .single-row{
+        width: 100%;
+    }
+    .single-sidebar{
+        align-self: flex-start;
+        margin-right:5%;
+    }
+    .portfolio-widget-wrapper {
+     
+        width: 100%;
+    }
+    .single-post-display{
+        margin-left: 10px;
+        width:100%;
+    }
+    
+    .blog-col-thumb{
+        margin-right: 0;
+    }
+    .blog-author-bar{
+        display: none;
+    }
+    .blog-bar{
+        display: none;
+    }
+    .blog-entry-content{
+        font-size:14px;
+        margin-top: -20px;
+        width: 290px;
+        margin-left: 15px;
+    }
+    .blog-col-thumb .post-thumbnail img{
+        height:150px;
+        width: 160px;
+    }
 }
 
 @media only screen and (max-width: 752px) {
@@ -106,7 +158,8 @@
     .portfolio-wrapper .portfolio-wrapper-top {
         grid-column: 1/2;
     }
-    
+  
+      
     
 }
 
@@ -172,8 +225,11 @@
     .dsignfly-search{
         display: none;
     }
+    .intro-container{
+        height: 350px;
+    }
     .intro-site-title{
-        font-size: 45px;
+        font-size: 24px;
     }
     .intro-site-description {
         font-size: 14px;
@@ -199,18 +255,17 @@
     .mail-add{
         font-size: 12px;
     }
+    .container{
+        width: 100%;
+    }
     .single-row{
         flex-direction: column;
+        width: 100%;
+        justify-content:center;
+        align-items:center;
+      
     }
-    /* .portfolio-widget-wrapper{
-        display:none;
-    } */
-    .widget-title {
-        display: none;
-    }
-    .blog-author-bar{
-        display: none;
-    }
+   
     .blog-temp-row{
         padding: 3%;
     }
@@ -221,10 +276,13 @@
         text-align: center;
     }
     .blog-col-thumb .post-thumbnail img{
-        width: 100%;
+        width: 260px;
     }
-    .blog-entry-content {
-        width: 250px;
+    .blog-entry-content{
+        font-size:14px;
+        margin-top: 0;
+        width: 260px;
+        margin-left: 0;
     }
     .archive-page-title{
         text-align: center;
@@ -254,4 +312,8 @@
     }
     #TB_prev{font-size: 14px}
     #TB_next{font-size: 14px}
+    .dsign-footer {
+        flex-direction: column;
+        align-items: center;
+    }
 }
