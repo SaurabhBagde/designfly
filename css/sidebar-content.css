@@ -8,15 +8,15 @@
 /********************************************************
 ------------------- Sidebar styles ----------------------
 ********************************************************/
-.widget-area {
+#secondary {
 	margin-top: 50px;
 }
 
-.widget-area .widget {
+#secondary .widget {
 	margin-bottom: 40px;
 }
 
-.widget-area .widget-title {
+#secondary .widget-title {
 	position: relative;
 	padding: 0px 0 5px 0;
 	margin-bottom: 10px;
@@ -25,7 +25,7 @@
 	text-shadow: 2px 0 #fff;
 }
 
-.widget-area .widget-title:before {
+#secondary .widget-title:before {
 	content: '';
 	position: absolute;
 	bottom: 0;
