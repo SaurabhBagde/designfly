@@ -1,4 +1,9 @@
 /*****************Header*************************/
+/* *{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+} */
 .header-container{
   max-width:1024px;
   margin: auto;
@@ -24,6 +29,7 @@
   .main-navigation {
     display: flex;
     flex-direction: row;
+    justify-content:flex-end;
     align-items: center;
     width: 60%;
     z-index: 1;
@@ -55,14 +61,17 @@
     background-color: #ef4643;
     color: #fff;
   }
-  .dsignfly-menu__list > .menu-item li.active a {
+  .dsignfly-menu__list > .menu-item.current-menu-item  {
     background-color: #ef4634;
     border-radius: 3px;
     color: #FFF;
   }
+  .dsignfly-menu__list > .menu-item.current-menu-item a{
+    color: #FFF;
+  }
   
 
-  .dsignfly-search .search-input {
+  .search-input {
     margin-left:30px;
     display: inline-block;
     width: 150px; 
@@ -77,13 +86,19 @@
     border: none;
     margin-left: 4px;
     cursor: pointer;
+    
+  }
+  .dsignfly-search{
+    position: relative;
   }
   
   .search-submit-img {
+    position: absolute;
     width: 20px;
     height: 20px;
-    object-fit: cover;
-    object-position: 0 -4%;
+    bottom: 3px;
+     /* object-fit: cover; */
+    /* object-position: 0 -4%; */
   
   }
   /************************************************
@@ -129,9 +144,9 @@
 }
 
 .feature-content {
-  margin-left: 10px;
+  margin-left: 15px;
   display: inline-block;
-  width: 77%;
+  /* width: 77%; */
 }
 
 .feature-title {
@@ -139,6 +154,10 @@
   font-size: 1.5rem;
   font-weight: bold; 
   color: #ef4634;
+}
+.feature-title:hover {
+  cursor: pointer;
+  color: #000;
 }
 
 .feature-description {
@@ -166,16 +185,16 @@
     text-decoration: none;
 }    
 
-.content .info .para,
-.content .contact-us .address,
-.content .contact-us .email {
+.para,
+.address,
+.email {
     font-size: 1rem;
     color: #62585f;
     line-height: 1.5rem;
     margin-bottom: 10px;
 }    
 
-.content .contact-us .email {
+ .email {
     display: inline-block;
     color: #ef4634;
 }    
@@ -346,6 +365,7 @@ hr.break {
 .portfolio-wrapper_home-bottom {
   grid-column: 1/4;
   margin: 5px 0;
+
 }
 
 .portfolio-wrapper_home-top .title {
@@ -356,6 +376,7 @@ hr.break {
   text-shadow: 2px 0 #ffffff;
   margin-bottom: 0;
   text-transform: uppercase;
+
 }
 .portfolio-btns{
  float: right;
@@ -385,8 +406,14 @@ hr.break {
   text-decoration: none;
   margin-top: 60px;  /*  can't find other way to do it */
 }
-
- .portfolio-view-all:hover {
+ /* a:visited {
+  color: #ef4634;
+} */
+.portfolio-wrapper{
+  width: 1024px;
+  margin:auto;
+}
+.portfolio-view-all:hover {
   background-color: #ef4634;
   text-decoration: none;
 }
@@ -399,11 +426,12 @@ hr.break {
 
 .portfolio-wrapper_home>div[class^="post-"] {
   position: relative;
-  margin: auto;
+  /* margin: auto; */
   /* height: 210px;
   width: 300px;
   border-radius: 10px; */
   /* overflow: hidden; */
+  box-sizing: 300 210;
 }
 
 .portfolio-wrapper_home>div[class^="post-"] .view-image {
@@ -413,12 +441,14 @@ hr.break {
 .portfolio-wrapper_home .post-thumbnail img {
   /* object-fit: cover; */
   /* object-position: center; */
+  /* height: 210px;
+  width: 300px; */
   height: 210px;
-  width: 300px;
+  width: 330px;
   border-radius: 10px;
   -moz-transition: 0.3s transform ease-out;
   transition: 0.3s transform ease-out; 
-  margin:auto;
+  /* margin:auto; */
 }
 
 .portfolio-wrapper_home>div[class^="post-"]:hover .post-thumbnail img {
@@ -437,12 +467,14 @@ hr.break {
   grid-template-columns: 300px 300px 300px;
   column-gap: 15px;
   row-gap: 15px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .portfolio-wrapper-top {
   grid-column: 1/4;
-  margin: 5px 0;
+  margin: auto;
+  width: 1024px;
+
 }
 
 .portfolio-wrapper-top hr {
@@ -492,6 +524,7 @@ hr.break {
   z-index: 1;
   -moz-transition: 0.3s opacity linear;
   transition: 0.3s opacity linear;
+ 
 }
 
 .portfolio-wrapper .post-title {
@@ -506,6 +539,7 @@ hr.break {
 .portfolio-wrapper>div[class^="post-"]:hover .post-thumbnail img {
   -moz-transform: scale(1.1);
   transform: scale(1.1);
+  padding: 15px;
 }
 
 .portfolio-wrapper>div[class^="post-"]:hover .view-image {

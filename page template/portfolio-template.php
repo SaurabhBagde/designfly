@@ -53,12 +53,6 @@ $query = new WP_Query( array(
 					}
 				?>
 				
-				<!-- <a href="#" class="portfolio-btns__link">
-					<?php// esc_html_e( 'Multimedia', 'dsign-fly' ); ?>
-				</a>
-				<a href="#" class="portfolio-btns__link">
-					<?php //esc_html_e( 'photography', 'dsign-fly' ); ?>
-				</a> -->
 			</div>
 			<hr />
 		</div>

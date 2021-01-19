@@ -7,9 +7,10 @@
 @media only screen and (max-width: 1142px) {
     .portfolio-wrapper,
     .portfolio-wrapper_home {
-        width:100%;
+        width:768px;
         -ms-grid-columns: 300px 300px;
         grid-template-columns: 300px 300px;
+        justify-content: center;
     }
 
     #portfolio-widget-wrapper {
@@ -19,10 +20,12 @@
 
     .portfolio-wrapper_home-top {
         grid-column: 1/3;
+        width: 768px;
     }
 
     .portfolio-wrapper .portfolio-wrapper-top {
         grid-column: 1/3;
+        width: 768px;
     }
     .intro-site-title{
         font-size: 30px;
@@ -85,8 +88,13 @@
         -ms-grid-columns: auto auto auto auto;
         grid-template-columns: auto auto auto auto;
     } */
-    .dsignfly-search .search-input{
+    .search-input{
         width: 100px;
+    }
+    .search-submit-img {
+        right: 10px;
+        bottom: 0;
+        top: 24px;
     }
     .dsignfly-menu__list > .menu-item a {
         padding: 2px 5px;
@@ -267,7 +275,7 @@
     }
    
     .blog-temp-row{
-        padding: 3%;
+        padding: 1%;
     }
     .feature-description{
         display:none;
@@ -275,15 +283,19 @@
     .feature-title{
         text-align: center;
     }
+    .blog-entry-header{
+        width:360px ;
+    }
     .blog-col-thumb .post-thumbnail img{
-        width: 260px;
+        width: 360px;
+        height: 350px;
     }
     .blog-entry-content{
-        font-size:14px;
         margin-top: 0;
-        width: 260px;
-        margin-left: 0;
+        width: 340px;
+     
     }
+    
     .archive-page-title{
         text-align: center;
     }
@@ -316,4 +328,28 @@
         flex-direction: column;
         align-items: center;
     }
+    .portfolio-wrapper,
+    .portfolio-wrapper_home{
+        width: 360px;
+    }
+    .portfolio-wrapper .portfolio-wrapper-top {
+        width:360px;
+    }
+    #secondary .widget_search{
+        display: block;
+    }
+    #secondary .widge-area{
+        max-width: 360px;
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+    .single-sidebar{
+        width:100%;
+        max-width: 360px;;    
+    }
+    #portfolio-widget-wrapper {
+        grid-template-columns: auto auto auto auto;
+    }
+   
 }

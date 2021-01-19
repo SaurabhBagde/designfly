@@ -23,7 +23,7 @@
 				Quis obcaecati consectetur, ipsa sit tenetur vero maxime est vel quaerat ducimus quasi veniam 
 				libero ab aut non eum autem, dolore expedita quo, nihil temporibus! Nam, modi laudantium.
 			</p>
-			<button class="read-more">read more</button>
+			<a class="read-more">read more</a>
 			</div>
 			<div class="contact-us">
 				<p class="dsign-title"><?php esc_html_e( 'Contact Us', 'dsign-fly' ); ?></p>
