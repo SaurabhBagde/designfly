@@ -147,18 +147,17 @@ function dsign_fly_scripts() {
 	wp_enqueue_style( 'media-queries', get_template_directory_uri() . '/css/media-queries.css', array(), '1.0.0' );
 	wp_enqueue_style( 'open-sans-bold', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap', array(), '1.0.0' );
 	wp_enqueue_style( 'sidebar-content', get_template_directory_uri() . '/css/sidebar-content.css', array(), '1.0.0' );
-
-	
-
+	wp_enqueue_script( 'dsign-fly-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'dsign-fly-main', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'dsign_fly_scripts' );
-function fnctn_add_thickbox () {
-    add_thickbox();
+function fnctn_add_thickbox() {
+	add_thickbox();
 }
-add_action ( 'wp_enqueue_scripts','fnctn_add_thickbox' );
+add_action( 'wp_enqueue_scripts', 'fnctn_add_thickbox' );
 
 
 $dsignfly_dependencies = apply_filters(
